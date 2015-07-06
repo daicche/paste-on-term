@@ -12,20 +12,9 @@ end open location
 on writeOnTerm(command)
 	tell application "iTerm"
 		activate
-		
+
 		tell current session of current terminal
 			write text command & " " -- 最後に半角スペースを加えないと実行してしまう
 		end tell
 	end tell
 end writeOnTerm
-
---文字置換ルーチン
-on repChar(origText, targStr, repStr)
-	set {txdl, AppleScript's text item delimiters} to {AppleScript's text item delimiters, targStr}
-	set temp to text items of origText
-	set AppleScript's text item delimiters to repStr
-	set res to temp as text
-	set AppleScript's text item delimiters to txdl
-	return res
-end repChar
-
