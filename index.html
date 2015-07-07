@@ -38,7 +38,28 @@
 <h3>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<p>Click the icon embeded in webpages → <img src="http://l0o0l.co/material/misc/iterm2_small.png"></p>
+
+<p>Click the icon embeded in webpages → <a href='pasteonterm://ruby%20%2de%20%27180%2edownto%280%29%2eeach%20do%20%7ci%7c%20puts%20%22%23%7bi%7d%20%22%2b%22%7c%22%2ai%3b%20sleep%201%20end%3b%20%60say%20hello%60%27'><img src="http://dai---chi.github.io/paste-on-term/images/iterm2.png" style='width:25px; line-height: 30px; vertical-align: sub'></a></p>
+
+<script language="JavaScript"><!--
+function makeBookmarklet(fObj) {
+	var script = fObj.codeArea1.value;
+	var link = 'pasteonterm://' + encodeURI(script)
+	var icon_html_before = '<a href="';
+	var icon_html_after = '"><img src="http://dai---chi.github.io/paste-on-term/images/iterm2.png" style="width:25px; line-height: 30px; vertical-align: sub"></a>';
+
+	var icon_html = icon_html_before + link + icon_html_after;
+
+	fObj.codeArea2.value = icon_html;
+}
+// --></script>
+
+## paste-on-term icon generator 
+<form>
+<textarea cols="40" rows="5" name="codeArea1" placeholder="script to convert"></textarea><br>
+<input type="button" value="Convert" onClick="makeBookmarklet(this.form)"><br>
+<textarea cols="40" rows="5" name="codeArea2" placeholder="generated html code"></textarea><br>
+</form>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/dai---chi/paste-on-term">PasteOnTerm.app</a> is maintained by <a href="https://github.com/dai---chi">dai---chi</a>.</span>
